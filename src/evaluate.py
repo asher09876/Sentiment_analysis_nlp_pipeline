@@ -22,7 +22,7 @@ def evaluate_model(features_path: Path, model_path: Path, reports_dir: Path):
         f.write(f"Accuracy: {acc:.3f}\n\n")
         f.write(report)
 
-    print(f"✅ Evaluation complete. Accuracy = {acc:.3f}")
+    print(f" Evaluation complete. Accuracy = {acc:.3f}")
     print(report)
 
     # Confusion Matrix
