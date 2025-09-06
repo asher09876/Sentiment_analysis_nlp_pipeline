@@ -27,7 +27,7 @@ def validate_and_clean(input_path: Path, out_dir: Path) -> Path:
     out_path = out_dir / "clean_news.csv"
     df.to_csv(out_path, index=False)
 
-    print(f"✅ Validation complete. {len(df)} rows saved to {out_path}")
+    print(f" Validation complete. {len(df)} rows saved to {out_path}")
     return out_path
 
 
