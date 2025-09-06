@@ -6,7 +6,7 @@ from src.train import train_model
 from src.evaluate import evaluate_model
 
 def run_pipeline():
-    print("🚀 Starting pipeline...")
+    print(" Starting pipeline...")
 
     # Step 1: Ingestion
     raw_dir = Path("data/raw")
@@ -25,7 +25,7 @@ def run_pipeline():
     # Step 5: Evaluation
     evaluate_model(features_file, model_path, Path("reports"))
 
-    print("🎉 Pipeline finished successfully!")
+    print(" Pipeline finished successfully!")
 
 if __name__ == "__main__":
     run_pipeline()
