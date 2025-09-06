@@ -49,7 +49,7 @@ def preprocess(input_path: Path, out_dir: Path):
     joblib.dump((X_train_tfidf, y_train, X_test_tfidf, y_test), out_dir / "tfidf_data.pkl")
     joblib.dump(vectorizer, out_dir / "tfidf_vectorizer.pkl")
 
-    print(f"✅ Preprocessing complete. Data saved to {out_dir}")
+    print(f" Preprocessing complete. Data saved to {out_dir}")
 
 
 if __name__ == "__main__":
