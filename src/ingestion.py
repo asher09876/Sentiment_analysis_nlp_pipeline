@@ -44,7 +44,7 @@ def fetch_news(keyword: str, out_dir: Path) -> Path:
     out_path = out_dir / f"news_{keyword.replace(' ', '_')}.csv"
     df.to_csv(out_path, index=False)
 
-    print(f"✅ Saved {len(df)} articles to {out_path}")
+    print(f" Saved {len(df)} articles to {out_path}")
     return out_path
 
 
