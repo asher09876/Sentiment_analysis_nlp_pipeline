@@ -14,7 +14,7 @@ def train_model(features_path: Path, models_dir: Path):
     # Evaluate quickly here
     y_pred = model.predict(X_test)
     acc = accuracy_score(y_test, y_pred)
-    print(f"✅ Training complete. Accuracy = {acc:.3f}")
+    print(f" Training complete. Accuracy = {acc:.3f}")
 
     # Save model
     models_dir.mkdir(parents=True, exist_ok=True)
