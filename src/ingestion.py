@@ -5,10 +5,7 @@ import os
 
 
 def fetch_news(keyword: str, out_dir: Path) -> Path:
-    """
-    Fetch recent news articles about a keyword from NewsAPI
-    and save them as a CSV in data/raw/.
-    """
+    
     api_key = os.getenv("NEWS_API_KEY")
     if not api_key:
         raise ValueError("NEWS_API_KEY not found. Did you set it correctly?")
