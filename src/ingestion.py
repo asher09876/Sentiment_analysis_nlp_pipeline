@@ -15,7 +15,7 @@ def fetch_news(keyword: str, out_dir: Path) -> Path:
         "q": keyword,
         "language": "en",
         "sortBy": "publishedAt",
-        "pageSize": 50,   # free tier linit 100 req/day
+        "pageSize": 50,   
         "apiKey": api_key,
     }
 
