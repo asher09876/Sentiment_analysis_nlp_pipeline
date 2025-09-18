@@ -1,12 +1,7 @@
 pandas
-numpy
 scikit-learn
-tensorflow
-keras
 spacy
-vaderSentiment
 requests
 matplotlib
-fastapi
-uvicorn
-python-dotenv
+seaborn
+joblib
