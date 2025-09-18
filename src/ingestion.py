@@ -8,7 +8,7 @@ def fetch_news(keyword: str, out_dir: Path) -> Path:
     
     api_key = os.getenv("NEWS_API_KEY")
     if not api_key:
-        raise ValueError("NEWS_API_KEY not found. Did you set it correctly?")
+        raise ValueError("NEWS_API_KEY not found")
 
     url = "https://newsapi.org/v2/everything"
     params = {
@@ -41,7 +41,7 @@ def fetch_news(keyword: str, out_dir: Path) -> Path:
     out_path = out_dir / f"news_{keyword.replace(' ', '_')}.csv"
     df.to_csv(out_path, index=False)
 
-    print(f" Saved {len(df)} articles to {out_path}")
+    print(f" Saved articles to {out_path}")
     return out_path
 
 
