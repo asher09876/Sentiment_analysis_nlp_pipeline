@@ -2,25 +2,15 @@ import pandas as pd
 from pathlib import Path
 
 def validate_and_clean(input_path: Path, out_dir: Path) -> Path:
-    """
-    Validate and clean ingested news data.
-    - Drop missing/empty text rows
-    - Drop duplicates
-    - Ensure datetime type
-    - Save cleaned data
-    """
     df = pd.read_csv(input_path)
 
-    # Drop rows with no text
     df = df.dropna(subset=["title", "content"])
-    df = df[df["title"].str.strip() != ""]
+    df = df[df["title"].str.strip() != ""] 
     df = df[df["content"].str.strip() != ""]
 
-    # Drop duplicates
     df = df.drop_duplicates(subset=["title", "content"])
 
-    # Ensure publishedAt is datetime
-    df["publishedAt"] = pd.to_datetime(df["publishedAt"], errors="coerce")
+    df["publishedAt"] = pd.to_datetime(df["publishedAt"], errors="coerce") #coerce- invalid dt are treated as Not a time
     df = df.dropna(subset=["publishedAt"])
 
     out_dir.mkdir(parents=True, exist_ok=True)
